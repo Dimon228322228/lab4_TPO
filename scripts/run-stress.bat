@@ -22,7 +22,7 @@ if errorlevel 1 exit /b 1
 
 "%JMETER_HOME%\bin\jmeter.bat" -g stress\stress.csv -o stress_report
 
-echo === График отклик vs нагрузка ===
-python scripts\plot-stress.py stress\stress.csv stress\stress-graph.png
+echo === График отклик vs нагрузка (все запросы) ===
+python scripts\plot-stress.py stress\results.csv stress\stress-graph.png
 
 echo Готово: stress\stress.csv, stress_report\index.html, stress\stress-graph.png
